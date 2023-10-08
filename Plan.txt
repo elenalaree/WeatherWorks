@@ -1,0 +1,14 @@
+1. Overview:
+    I plan to allow users to search for 2 cities at once so they can compare the weather in each.
+
+2. Audience would be people looking to move to another place or seeing what the weather difference is between two cities.
+
+3. The major functions of this app would be to pull up 2 cities 5 day forcast side by side for a comparison. A ability to save cities as favorites.
+
+4. 
+
+5. OpenWeatherMap, local storage.
+
+6. Modules include favorites page, main page. If these are not modules, I feel like modules wasn't explained well enough for me to offer a description.
+
+7. 

@@ -1,0 +1,51 @@
+:root {
+    --color-primary: #304F57;
+    /* Blue */
+    --color-secondary: #7B5D67;
+    /* Red */
+    --color-accent: #DF8D67;
+    /* Green */
+    --color-text: #3F3F45;
+    /* Dark Gray */
+    --color-background: #C19D8D;
+    /* White */
+}
+
+.color-primary {
+    background-color: var(--color-primary);
+}
+
+.color-secondary {
+    background-color: var(--color-secondary);
+}
+
+.color-accent {
+    background-color: var(--color-accent);
+}
+
+.color-text {
+    background-color: var(--color-text);
+}
+
+.color-background {
+    background-color: var(--color-background);
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.oxygen {
+    font-family: 'oxygen';
+}
+
+.cinzel {
+    font-family: 'cinzel';
+}
+
+.cormorant {
+    font-family: 'Cormorant Garamond';
+}
