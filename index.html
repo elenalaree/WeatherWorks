@@ -30,14 +30,17 @@
                 <h3 class="card-header">Search for a City:</h3>
                 <form id="user-form" class="card-body">
                     <label class="form-label" for="search"></label>
-                    <input name="search" id="search" type="text" autofocus="true" class="form-input"
+                    <input name="search" id="city1" type="text" autofocus="true" class="form-input"
                         placeholder="San Antonio" />
-                    <button type="submit" class="button find-city">
-                        Check Weather
+                    <label class="form-label" for="search"></label>
+                    <input name="search" id="city2" type="text" autofocus="true" class="form-input"
+                        placeholder="Rexburg" />
+                    <button type="submit" class="button" id="find-cities">
+                        Compare Weather
                     </button>
                 </form>
             </div>
-            <div id="city-box" class="col-12 flex-wrap d-flex text-center"></div>
+            <div id="city-box" class=""></div>
         </section>
 
         <section class="weather">
@@ -45,7 +48,25 @@
             <div class="day-cast">
                 <h3>5-Day Forecast:</h3>
             </div>
-            <div id="forecast-container" class="forecast"></div>
+            <div class="forecast-container">
+                <div id="cityForcast1" class="fiveDay forecast">
+                    <h2>City 1 Name</h2>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+
+                </div>
+                <div id="cityForcast2" class="forecast">
+                    <h2>City 2 Name</h2>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                </div>
+            </div>
         </section>
     </main>
     <script src="/js/script.js"></script>
