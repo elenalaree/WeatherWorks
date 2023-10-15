@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Works</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Weather DashBoard</h1>
+        <nav>
+            <ul>
+                <li>
+                    Home
+                </li>
+                <li>
+                    Favorites
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="card city">
+                <h3 class="card-header">Search for a City:</h3>
+                <form id="user-form" class="card-body">
+                    <label class="form-label" for="search"></label>
+                    <input name="search" id="city1" type="text" autofocus="true" class="form-input"
+                        placeholder="San Antonio" />
+                    <label class="form-label" for="search"></label>
+                    <input name="search" id="city2" type="text" autofocus="true" class="form-input"
+                        placeholder="Rexburg" />
+                    <button type="submit" class="button" id="find-cities">
+                        Compare Weather
+                    </button>
+                </form>
+            </div>
+            <div id="city-box" class=""></div>
+        </section>
+
+        <section class="weather">
+            <div id="today-container" class="today"></div>
+            <div class="day-cast">
+                <h3>5-Day Forecast:</h3>
+            </div>
+            <div class="forecast-container">
+                <div id="cityForcast1" class="fiveDay forecast">
+                    <h2>City 1 Name</h2>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+
+                </div>
+                <div id="cityForcast2" class="forecast">
+                    <h2>City 2 Name</h2>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                    <aside class="borderBox">.</aside>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
