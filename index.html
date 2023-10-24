@@ -8,6 +8,11 @@
     <title>Weather Works</title>
 
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300&family=Oxygen:wght@300;400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -16,10 +21,10 @@
         <nav>
             <ul>
                 <li>
-                    Home
+                    <a href="/index.html">Home</a>
                 </li>
                 <li>
-                    Favorites
+                    <a href="/pages/faves.html">Favorites</a> 
                 </li>
             </ul>
         </nav>
@@ -38,46 +43,25 @@
                     <button type="submit" class="button" id="find-cities">
                         Compare Weather
                     </button>
+                    <button type="submit" class="button" id="save-cities">
+                        Save city search
+                    </button>
                 </form>
             </div>
-            <div id="city-box" class=""></div>
         </section>
 
-        <section class="weather">
-            <div id="today-container" class="today"></div>
-            <div class="day-cast">
-                <h3>5-Day Forecast:</h3>
-            </div>
-            <div class="forecast-container">
-                <div id="cityForcast1" class="fiveDay forecast">
-                    <h2>City 1 Name</h2>
-                    <aside class="borderBox">
-                        <p>Temp: 78</p>
-                        <p>Wind: 4mph</p>
-                        <p>Humidity: 20%</p>
+        <section class="weather forecast-container">
+            <div class="side1 forecast">
+                <h2 id="cityName1">City 1</h2>
 
-                    </aside>
-                    <aside class="borderBox fiveDayBox">
-                        <p>High: 87</p>
-                        <p>Low: 65</p>
-                        <p>Sunrise: 7:45AM</p>
-                        <p>Sunset: 8:00PM</p>
-                        <p class="forecastPic"></p>
-                        <p>Humidity: 21%</p>
-                    </aside>
-                    <aside class="borderBox">.</aside>
-                    <aside class="borderBox">.</aside>
-                    <aside class="borderBox">.</aside>
+                <div id="cityForecast1" class="fiveDay">
 
                 </div>
-                <div id="cityForcast2" class="forecast">
-                    <h2>City 2 Name</h2>
-                    <aside class="borderBox">
-                    </aside>
-                    <aside class="borderBox">.</aside>
-                    <aside class="borderBox">.</aside>
-                    <aside class="borderBox">.</aside>
-                    <aside class="borderBox">.</aside>
+            </div>
+            <div class="side2 forecast">
+                <h2 id="cityName2">City 2</h2>
+                <div id="cityForecast2" class="fiveDay">
+
                 </div>
             </div>
         </section>

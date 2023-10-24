@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Works</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Weather DashBoard</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/index.html">Home</a>
+                </li>
+                <li>
+                    <a href="/pages/faves.html">Favorites</a> 
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="favorites borderBox">
+            <h1>Favorites</h1>
+            <div id="holdFaves"></div>
+
+        </section>
+
+        <section class="weather forecast-container">
+            <div class="side1 forecast">
+                <h2 id="cityName1">City 1</h2>
+
+                <div id="cityForecast1" class="fiveDay">
+
+                </div>
+            </div>
+            <div class="side2 forecast">
+                <h2 id="cityName2">City 2</h2>
+                <div id="cityForecast2" class="fiveDay">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../js/faves.js" type="module"></script>
+    
+</body>
+
+</html>
