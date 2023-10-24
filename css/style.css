@@ -70,6 +70,18 @@ nav ul{
     list-style-type: none;
     font-size: 1.25rem;
 }
+nav li{
+    width: 50%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li:hover{
+    background-color: var(--color-secondary);
+}
 
 .borderBox{
     border: 2px solid var(--color-text);
@@ -95,7 +107,7 @@ nav ul{
 }
 
 .button {
-    width: 100%;
+    width: 49%;
     height: 5vh;
     background-color: var(--color-primary);
     color: white;
@@ -109,21 +121,92 @@ nav ul{
 .forecast {
     width: 45%;
     margin: 3px auto;
+    text-align: center;
 }
 
-aside{
+.weatherIcon{
+    width: 50px;
+}
+
+aside {
     width: 100%;
-    height: 15vh;
+    
     margin: 5px 0;
     padding: 2px;
+    background-color: var(--color-background);
 }
 
-.fiveDayBox {
+.fiveDayBox, .today {
     display: flex;
     flex-wrap: wrap;
 
 }
 
-.fiveDayBox p {
+.fiveDayBox p, .today p{
     width: 50%;
+    padding: 2px;
+}
+
+.favorites {
+    min-height: 40vh;
+    text-align: center;
+}
+
+.holdFaves {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px auto;
+}
+
+.cityPart {
+    margin: 2px;
+}
+
+.yeet{
+    background-color: #DF8D67;
+    padding: 2px;
+}
+
+.daCities {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 2px;
+    margin: 2px;
+    font-family: 'cinzel';
+    font-size: 1.25rem;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 1025px) {
+    .forecast-container{
+        display: block;
+        width: 100%;
+    }
+    .forecast {
+        width: 100%;
+        margin: 3px auto;
+        text-align: center;
+    }
+    .fiveDay {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        
+    }
+    .fiveDayBox, .today {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 2px;
+    
+    }
+    aside {
+        
+        margin: 5px 0;
+        padding: 2px;
+        background-color: var(--color-background);
+    
+  }
 }
