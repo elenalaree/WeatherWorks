@@ -4,8 +4,12 @@ const dayBox2 = document.getElementById('cityForecast2');
 // get information for both cities
 export async function collectCities(cityA, cityB) {
     try {
-        dayBox1.innerHTML = "";
-        dayBox2.innerHTML = "";
+            dayBox1.innerHTML = "";
+            dayBox2.innerHTML = "";
+            dayBox1.classList.remove('visible');
+            dayBox2.classList.remove('visible');
+    
+
         // get both city lat and long
         const first = await getWeatherInfo(cityA);
         const second = await getWeatherInfo(cityB);
@@ -72,6 +76,7 @@ function insertWeather(one, two) {
     const todayContainer1 = document.createElement('aside');
     todayContainer1.classList.add('borderBox');
     todayContainer1.classList.add('today');
+    
     var dt = new Date(one.current.dt * 1000);
     var windCurrent = parseInt(one.current.wind_speed);
     var tempCurrent = parseInt(one.current.temp);
@@ -98,7 +103,7 @@ function insertWeather(one, two) {
         var dt = new Date(day.dt * 1000).toDateString();
         var sunrise = new Date(day.sunrise * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit'});
         var sunset = new Date(day.sunset * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit'});
-        var rain = day.pop * 100
+        var rain = Math.round(day.pop * 100)
         aside.innerHTML = `
                 <p>(${dt})</p>
                 <p> <img 
@@ -119,6 +124,7 @@ function insertWeather(one, two) {
     const todayContainer2 = document.createElement('aside');
     todayContainer2.classList.add('borderBox');
     todayContainer2.classList.add('today');
+    
     var dt2 = new Date(two.current.dt * 1000);
     var windCurrent2 = parseInt(two.current.wind_speed);
     var tempCurrent2 = parseInt(two.current.temp);
@@ -144,7 +150,7 @@ function insertWeather(one, two) {
         var dt = new Date(day.dt * 1000);
         var sunrise = new Date(day.sunrise * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit'});
         var sunset = new Date(day.sunset * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit'});
-        var rain = day.pop * 100
+        var rain = Math.round(day.pop * 100)
         aside.innerHTML = `
             <p>(${dt.toDateString()})</p>
             <p> <img 
@@ -158,4 +164,6 @@ function insertWeather(one, two) {
         `;
         dayBox2.appendChild(aside);
     });
+    dayBox1.classList.add('visible');
+    dayBox2.classList.add('visible');
 }

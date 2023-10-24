@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Weather Works</title>
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -17,7 +17,7 @@
 
 <body>
     <header>
-        <h1>Weather DashBoard</h1>
+        <h1 class="cormorant">Weather DashBoard</h1>
         <nav>
             <ul>
                 <li>
@@ -32,18 +32,18 @@
     <main>
         <section>
             <div class="card city">
-                <h3 class="card-header">Search for a City:</h3>
+                <h2 class="searchCity oxygen">Search for a City:</h2>
                 <form id="user-form" class="card-body">
-                    <label class="form-label" for="search"></label>
-                    <input name="search" id="city1" type="text" autofocus="true" class="form-input"
-                        placeholder="San Antonio" />
-                    <label class="form-label" for="search"></label>
-                    <input name="search" id="city2" type="text" autofocus="true" class="form-input"
-                        placeholder="Rexburg" />
-                    <button type="submit" class="button" id="find-cities">
+                    <label class="form-label" for="city1"></label>
+                    <input name="city1" id="city1" type="text" autofocus="true" class="form-input"
+                        placeholder="San Antonio" >
+                    <label class="form-label" for="city2"></label>
+                    <input name="city2" id="city2" type="text" autofocus="true" class="form-input"
+                        placeholder="Rexburg" >
+                    <button type="submit" class="button cinzel" id="find-cities">
                         Compare Weather
                     </button>
-                    <button type="submit" class="button" id="save-cities">
+                    <button type="submit" class="button cinzel" id="save-cities">
                         Save city search
                     </button>
                 </form>

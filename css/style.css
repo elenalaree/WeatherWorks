@@ -1,12 +1,12 @@
 :root {
     --color-primary: #304F57;
-   
+
     --color-secondary: #7B5D67;
-    
+
     --color-accent: #DF8D67;
- 
+
     --color-text: #3F3F45;
- 
+
     --color-background: #C19D8D;
 
 }
@@ -64,26 +64,32 @@ header {
     height: 100%;
     color: white;
 }
-nav ul{
+
+nav ul {
     display: flex;
     justify-content: space-around;
     list-style-type: none;
     font-size: 1.25rem;
 }
-nav li{
+
+nav li {
     width: 50%;
 }
 
 nav a {
     text-decoration: none;
     color: white;
+    font-family: 'cinzel';
 }
 
-nav li:hover{
+nav li:hover {
     background-color: var(--color-secondary);
 }
 
-.borderBox{
+.searchCity{
+    padding-left: 10px;
+}
+.borderBox {
     border: 2px solid var(--color-text);
 }
 
@@ -93,7 +99,7 @@ nav li:hover{
     border: none;
     border: 1px solid black;
     border-radius: 4px;
-    
+
 }
 
 #user-form {
@@ -102,6 +108,7 @@ nav li:hover{
     flex-wrap: wrap;
     justify-content: center;
 }
+
 #user-form * {
     margin: 5px auto;
 }
@@ -111,9 +118,10 @@ nav li:hover{
     height: 5vh;
     background-color: var(--color-primary);
     color: white;
+    font-size: 1.25rem;
 }
 
-.forecast-container{
+.forecast-container {
     display: flex;
     width: 100%;
 }
@@ -124,28 +132,46 @@ nav li:hover{
     text-align: center;
 }
 
-.weatherIcon{
+.weatherIcon {
     width: 50px;
 }
 
 aside {
     width: 100%;
-    
     margin: 5px 0;
     padding: 2px;
     background-color: var(--color-background);
 }
 
-.fiveDayBox, .today {
+.fiveDayBox,
+.today {
     display: flex;
     flex-wrap: wrap;
 
 }
 
-.fiveDayBox p, .today p{
+.fiveDayBox p,
+.today p {
     width: 50%;
     padding: 2px;
 }
+
+/* Define a slide-out transition */
+@keyframes slideOut {
+    from {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.visible {
+    animation: slideOut 1s ease;
+    /* Shown, slide up */
+}
+
 
 .favorites {
     min-height: 40vh;
@@ -162,7 +188,7 @@ aside {
     margin: 2px;
 }
 
-.yeet{
+.yeet {
     background-color: #DF8D67;
     padding: 2px;
 }
@@ -172,41 +198,75 @@ aside {
     color: white;
     padding: 2px;
     margin: 2px;
-    font-family: 'cinzel';
+    font-family: 'Cinzel';
     font-size: 1.25rem;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
 }
 
-@media only screen and (min-width: 1025px) {
-    .forecast-container{
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.yeet:hover {
+    animation: spin 1s linear;
+}
+
+@media screen and (min-width: 1025px) {
+    .forecast-container {
         display: block;
         width: 100%;
     }
+
     .forecast {
         width: 100%;
         margin: 3px auto;
         text-align: center;
     }
+
     .fiveDay {
         display: flex;
         flex-direction: row;
         width: 100%;
-        
+
     }
-    .fiveDayBox, .today {
+
+    .fiveDayBox,
+    .today {
         display: flex;
         flex-wrap: wrap;
         margin: 2px;
-    
+
     }
+
     aside {
-        
+
         margin: 5px 0;
         padding: 2px;
         background-color: var(--color-background);
+
+    }
+
+    @keyframes slideOut {
+        from {
+            transform: translateX(100%);
+        }
     
-  }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+    .visible {
+        animation: slideOut 1s ease;
+        /* Shown, slide up */
+    }
 }
