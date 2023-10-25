@@ -84,7 +84,7 @@ function insertWeather(one, two) {
     var sunset1 = new Date(one.daily[0].sunset * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit'});
     todayContainer1.innerHTML = `
         <p>Temp: ${tempCurrent}&deg;F</p>
-        <p><img src="http://openweathermap.org/img/wn/${one.current.weather[0].icon}.png" alt="${one.current.weather[0].description}" class=" weatherIcon"></p>
+        <p><img src="https://openweathermap.org/img/wn/${one.current.weather[0].icon}.png" alt="${one.current.weather[0].description}" class=" weatherIcon"></p>
         <p>High: ${one.daily[0].temp.max}&deg;F</p>
         <p>Low: ${one.daily[0].temp.min}&deg;F</p>
         <p>Sunrise: ${sunrise1}</p>
@@ -107,7 +107,7 @@ function insertWeather(one, two) {
         aside.innerHTML = `
                 <p>(${dt})</p>
                 <p> <img 
-                src="http://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}"/></p>
+                src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}"/></p>
                 <p>High: ${day.temp.max}&deg;F</p>
                 <p>Low: ${day.temp.min}&deg;F</p>
                 <p>Sunrise: ${sunrise}</p>
@@ -132,7 +132,7 @@ function insertWeather(one, two) {
     var sunset2 = new Date(two.daily[0].sunset * 1000).toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit'});
     todayContainer2.innerHTML = `
     <p>Temp: ${tempCurrent2}&deg;F</p>
-    <p><img src="http://openweathermap.org/img/wn/${two.current.weather[0].icon}.png" alt="${two.current.weather[0].description}" class=" weatherIcon"></p>
+    <p><img src="https://openweathermap.org/img/wn/${two.current.weather[0].icon}.png" alt="${two.current.weather[0].description}" class=" weatherIcon"></p>
     <p>High: ${two.daily[0].temp.max}&deg;F</p>
     <p>Low: ${two.daily[0].temp.min}&deg;F</p>
     <p>Sunrise: ${sunrise2}</p>
@@ -154,7 +154,7 @@ function insertWeather(one, two) {
         aside.innerHTML = `
             <p>(${dt.toDateString()})</p>
             <p> <img 
-            src="http://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}"/></p>
+            src="https://openweathermap.org/img/wn/${day.weather[0].icon}.png" alt="${day.weather[0].description}"/></p>
             <p>High: ${day.temp.max}&deg;F</p>
             <p>Low: ${day.temp.min}&deg;F</p>
             <p>Sunrise: ${sunrise}</p>
