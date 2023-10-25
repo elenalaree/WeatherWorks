@@ -8,9 +8,13 @@ const holdFaves = document.getElementById('holdFaves');
 
 export async function addToFaves(cityA, cityB) {
     const faveCityPair = [cityA, cityB];
-    myFaves.push(faveCityPair);
-    console.log(faveCityPair);
-    localStorage.setItem('the-faves', JSON.stringify(myFaves));
+    if (myFaves.includes(faveCityPair)) {
+        // Do nothing
+    } else {
+        myFaves.push(faveCityPair);
+        console.log(faveCityPair);
+        localStorage.setItem('the-faves', JSON.stringify(myFaves));
+    }
 }
 
 export function fillFaves() {
