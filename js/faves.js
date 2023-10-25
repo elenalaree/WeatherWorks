@@ -10,6 +10,7 @@ export async function addToFaves(cityA, cityB) {
     const faveCityPair = [cityA, cityB];
     if (myFaves.includes(faveCityPair)) {
         // Do nothing
+        console.log("Don't add this.")
     } else {
         myFaves.push(faveCityPair);
         console.log(faveCityPair);
