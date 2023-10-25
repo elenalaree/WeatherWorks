@@ -118,7 +118,7 @@ nav li:hover {
     height: 5vh;
     background-color: var(--color-primary);
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
 }
 
 .forecast-container {
@@ -237,6 +237,10 @@ aside {
         flex-direction: row;
         width: 100%;
 
+    }
+
+    .button{
+        font-size: 1.25rem;
     }
 
     .fiveDayBox,
