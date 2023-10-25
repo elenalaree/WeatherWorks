@@ -7,15 +7,39 @@ const myFaves = JSON.parse(localStorage.getItem('the-faves')) || [];
 const holdFaves = document.getElementById('holdFaves');
 
 export async function addToFaves(cityA, cityB) {
-    const faveCityPair = [cityA, cityB];
-    if (myFaves.includes(faveCityPair)) {
+    let lowerCity1 = cityA.toLowerCase();
+    let lowerCity2 = cityB.toLowerCase();
+
+    const faveCityPair = [lowerCity1, lowerCity2];
+    
+    const checkCheck = checkCities(faveCityPair, myFaves)
+    
+    if (checkCheck == true) {
         // Do nothing
-        console.log("Don't add this.")
+        
     } else {
         myFaves.push(faveCityPair);
         console.log(faveCityPair);
         localStorage.setItem('the-faves', JSON.stringify(myFaves));
     }
+}
+
+function checkCities(obj, arr){
+    let trueFalse = false;
+    for (let pair = 0; pair < arr.length; pair++) {
+            let cityOne = arr[pair][0];
+            let cityTwo = arr[pair][1];
+            let incoming1 = obj[0];
+            let incoming2 = obj[1];
+            if(cityOne == incoming1 && cityTwo == incoming2 || cityTwo == incoming1 && cityOne == incoming2){
+                
+                trueFalse = true;
+            }
+            else {
+                trueFalse = false;
+            }
+    }
+    return trueFalse;
 }
 
 export function fillFaves() {
